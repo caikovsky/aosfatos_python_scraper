@@ -1,3 +1,6 @@
-.DS_Store
 .vscode
+.DS_Store
 .scrapy
+
+# Generated files
+*.csv
