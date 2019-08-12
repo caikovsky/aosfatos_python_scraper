@@ -11,8 +11,8 @@
 
 BOT_NAME = 'aos_fatos'
 
-SPIDER_MODULES = ['aos_fatos.spiders']
-NEWSPIDER_MODULE = 'aos_fatos.spiders'
+SPIDER_MODULES = ['scraper.spiders']
+NEWSPIDER_MODULE = 'scraper.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
