@@ -9,7 +9,9 @@ This is a python project which scrapes every news reported into [Aos Fatos websi
 
 1. Start Pipenv environment with `$ pipenv shell`
 
-2. Run aos_fatos scrapy project:
+2. Install environment depedencies with `$ pipenv install`
+
+3. Run aos_fatos scrapy project:
 `$ scrapy crawl fatos -s HTTPCACHE_ENABLED=1`, and to generate a file with all the scraped data (as a CSV, for example), use `-o {filename}.csv` flag.
 
 ## Libraries
