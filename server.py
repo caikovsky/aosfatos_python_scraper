@@ -10,6 +10,7 @@ cors = CORS(app, resources={r"/api/*": {"origins": "*"}}) # enable CORS
 @app.route('/api/crawl')
 def index():
   data = '' # "None"
+  flatten_file_data = ''
 
   if os.path.isfile('./fatos.json'):
     with open("fatos.json") as f:
@@ -18,11 +19,13 @@ def index():
     spider_name = "fatos"
     subprocess.check_output(['scrapy', 'crawl', spider_name, "-o", "fatos.json", "-s", "HTTPCACHE_ENABLED=1"])
 
-    with open("fatos.json") as f:
-      file_data = jsonify(json.loads(f.read()))
+  with open("fatos.json") as f:
+    file_data = f.read()
 
     for line in file_data:
-      data += line
+      flatten_file_data += line
+
+    data = jsonify(json.loads(flatten_file_data))
 
   return data
 
