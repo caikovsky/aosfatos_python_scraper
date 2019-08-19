@@ -9,8 +9,10 @@ pylint = "*"
 [packages]
 ipython = "*"
 requests = "*"
-scrapy = "*"
 ipdb = "*"
+scrapy = "==1.6"
+flask = "*"
+flask-cors = "*"
 
 [requires]
 python_version = "3.7"
